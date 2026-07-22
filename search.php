@@ -64,7 +64,7 @@ https://templatemo.com/tm-539-simple-house
 			<div class="tm-container-inner tm-persons">
 				<div class="row">
 					<?php
-						$link = mysqli_connect('140.127.220.233','a1083305','a1083305Checkpoint7','a1083305');
+						require_once 'db.php';
 						$key = $_POST['keyword'];
 						/* Artist */ 
 						$SQL = "SELECT * FROM Artist WHERE aname like '%$key%' OR birthplace like '%$key%' OR age like '%$key%' OR aname like '%$key%'";

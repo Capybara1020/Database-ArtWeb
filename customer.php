@@ -63,7 +63,7 @@ https://templatemo.com/tm-539-simple-house
 			<div class="tm-container-inner tm-persons">
 				<div class="row">
 					<?php
-						$link = mysqli_connect('140.127.220.233','a1083305','a1083305Checkpoint7','a1083305');
+						require_once 'db.php';
 						$SQL = "SELECT * FROM Customer";
 						$SQL2 = "SELECT * FROM Customer_Like";
 						$result = mysqli_query($link,$SQL);
