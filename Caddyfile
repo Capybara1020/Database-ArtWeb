@@ -1,0 +1,3 @@
+ericaartweb.duckdns.org {
+	reverse_proxy web:80
+}
