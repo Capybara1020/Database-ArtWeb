@@ -8,6 +8,7 @@
     <title>Gallery Database</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
 	<link href="css/templatemo-style.css" rel="stylesheet" />
+	<?php include 'analytics.php'; ?>
 </head>
 <!--
 
