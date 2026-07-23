@@ -465,6 +465,9 @@ p, address {
 }
 
 .tm-gallery-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
@@ -473,6 +476,12 @@ p, address {
   font-weight: 400;
   color: #1A6692;
   margin-bottom: 15px;
+  /* --- 新增以下設定 --- */
+  height: 4.8rem;
+  min-height: 3em;          /* 設定最小高度（約 2 行字的高度） */
+  display: flex;            /* 使用 Flex 排版 */
+  flex-direction: column;   /* 垂直排列內部元素（例如標題與 by 藝術家名稱） */
+  justify-content: center;  /* 內容垂直置中，文字比較少時也不會顯得空洞 */
 }
 
 .tm-gallery-description {
@@ -562,11 +571,18 @@ p, address {
   margin-bottom: 20px;
 }
 
+@media (min-width: 1005px) {
+  .tm-persons .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
 .tm-person {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  justify-content: right;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 60px;
 }
 
@@ -576,7 +592,21 @@ p, address {
   }
 }
 
+.tm-person-img {
+  width: 160px;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .tm-person-description {
+  width: 330px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tm-person-description_customer {
+  width: 420px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -597,11 +627,18 @@ p, address {
 
 .tm-person-title {
   color: #C39;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .tm-person-about {
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  min-height: 200px;
+  justify-content: center;
+  display: flex;            /* 使用 Flex 排版 */
+  flex-direction: column;   /* 垂直排列內部元素（例如標題與 by 藝術家名稱） */
 }
 
 .tm-social-link {

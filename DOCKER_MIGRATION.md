@@ -204,6 +204,7 @@ curl -s "http://localhost:8080/artist.php" | grep -o "tm-person-name" | wc -l
 | 指令 | 用途 |
 |---|---|
 | `docker compose down` | 停止並移除容器，但**保留** `db_data` volume，資料不會不見 |
+| `docker compose up -d` | `up`：代表「建立並啟動」docker-compose.yml 裡面定義的所有服務容器。如果 Image 還沒建立過，它會順便自動進行 Build。`-d`（Detached mode）：代表在背景執行。這樣 Terminal 終端機就不會被容器輸出的 Log 佔用，可以繼續輸入其他指令。 |
 | `docker compose down -v` | 連同 volume 一起刪除，等於資料庫**清空重來**（改了 `.sql` 檔想重新匯入時會用到，因為初始化腳本只在資料庫是空的時候才會執行） |
 | `docker compose logs web --tail 50` | 看 PHP/Apache 容器的 log，排查網頁錯誤用 |
 | `docker compose restart web` | 只重啟網頁容器，不動資料庫 |

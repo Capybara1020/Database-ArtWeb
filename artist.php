@@ -17,7 +17,7 @@ Simple House
 https://templatemo.com/tm-539-simple-house
 
 -->
-<body> 
+<body>
 	<div class="container">
 	<!-- Top box -->
 		<!-- Logo & Site Name -->
@@ -46,7 +46,7 @@ https://templatemo.com/tm-539-simple-house
 									</form>
 								</li>
 							</ul>
-						</nav>	
+						</nav>
 					</div>
 				</div>
 			</div>

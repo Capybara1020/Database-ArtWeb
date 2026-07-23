@@ -17,7 +17,7 @@ Simple House
 https://templatemo.com/tm-539-simple-house
 
 -->
-<body> 
+<body>
 	<div class="container">
 	<!-- Top box -->
 		<!-- Logo & Site Name -->
@@ -56,7 +56,7 @@ https://templatemo.com/tm-539-simple-house
 			<header class="row tm-welcome-section">
 				<?php
 				$id = $_GET['id'];
-				echo "<h2 class='col-12 text-center tm-section-title'><p class='col-12 text-center'>".$id."</p></h2>";
+				echo "<h2 class='col-12 text-center tm-section-title'><p class='col-12 text-center'>".htmlspecialchars($id)."</p></h2>";
 				?>
 				<!--<p class="col-12 text-center"> </p>-->
 			</header>
@@ -68,8 +68,8 @@ https://templatemo.com/tm-539-simple-house
 
 				<?php
 				    require_once 'db.php';
-    				$id = $_GET['id'];
-    				$SQL = "SELECT * FROM Artwork WHERE $id = aname";
+    				$id = mysqli_real_escape_string($link, $_GET['id']);
+    				$SQL = "SELECT * FROM Artwork WHERE aname = '$id'";
     				$result = mysqli_query($link,$SQL);
     				$count = 0;
     				while($row = mysqli_fetch_assoc($result)){
