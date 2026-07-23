@@ -17,7 +17,7 @@ Simple House
 https://templatemo.com/tm-539-simple-house
 
 -->
-<body> 
+<body>
 	<div class="container">
 	<!-- Top box -->
 		<!-- Logo & Site Name -->
@@ -46,7 +46,7 @@ https://templatemo.com/tm-539-simple-house
 									</form>
 								</li>
 							</ul>
-						</nav>	
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -61,7 +61,7 @@ https://templatemo.com/tm-539-simple-house
 			<div class="tm-container-inner tm-persons">
 				<div class="row">
 					<?php
-						$link = mysqli_connect('140.127.220.233','a1083305','a1083305Checkpoint7','a1083305');
+						require_once 'db.php';
 						$SQL = "SELECT * FROM Artist";
 						$result = mysqli_query($link,$SQL);
 						while($row = mysqli_fetch_assoc($result)){

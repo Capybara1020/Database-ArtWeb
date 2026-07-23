@@ -17,7 +17,7 @@ Simple House
 https://templatemo.com/tm-539-simple-house
 
 -->
-<body> 
+<body>
 
 	<div class="container">
 	<!-- Top box -->
@@ -47,7 +47,7 @@ https://templatemo.com/tm-539-simple-house
 									</form>
 								</li>
 							</ul>
-						</nav>	
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -63,7 +63,7 @@ https://templatemo.com/tm-539-simple-house
 			<div class="tm-container-inner tm-persons">
 				<div class="row">
 					<?php
-						$link = mysqli_connect('140.127.220.233','a1083305','a1083305Checkpoint7','a1083305');
+						require_once 'db.php';
 						$SQL = "SELECT * FROM Customer";
 						$SQL2 = "SELECT * FROM Customer_Like";
 						$result = mysqli_query($link,$SQL);
@@ -76,10 +76,10 @@ https://templatemo.com/tm-539-simple-house
 								if($row["cname"] == $row2["cname"]){
 									echo "<article class='col-lg-6'>";
 										echo "<figure class='tm-person'>";
-											echo "<figcaption class='tm-person-description'>";
+											echo "<figcaption class='tm-person-description_customer'>";
 												echo "<h4 class='tm-person-name'>"."<b>".$row["cname"]."</b>"."</h4>";
 												echo "<p class='tm-person-title'>"."Total Amount: "."<b>".$row["amount"]."</b>"." U.S.D(Million)"."</p>";
-												echo "<p class='tm-person-about'>"."地址: ".$row["address"]."<br>"."喜歡的藝術家: ".$row2["aname"]."<br>"."喜歡的藝術類型: ".$row2["gname"]."</p>";
+												echo "<p class='tm-person-about'>"."地址：".$row["address"]."<br>"."喜歡的藝術家：".$row2["aname"]."<br>"."喜歡的藝術類型：".$row2["gname"]."</p>";
 											echo "</figcaption>";
 										echo "</figure>";
 									echo "</article>";

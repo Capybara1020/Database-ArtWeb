@@ -1,3 +1,8 @@
+<?php
+require_once 'db.php';
+$key = $_POST['keyword'] ?? '';
+$keySafe = mysqli_real_escape_string($link, $key);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +22,7 @@ Simple House
 https://templatemo.com/tm-539-simple-house
 
 -->
-<body> 
+<body>
 
 	<div class="container">
 	<!-- Top box -->
@@ -56,18 +61,15 @@ https://templatemo.com/tm-539-simple-house
 		<main>
 			<header class="row tm-welcome-section">
 				<?php
-					$key = $_POST['keyword'];
-					echo "<p class='col-12 text-center'>"."有關「".$key."」的所有搜尋結果"."</p>";
+					echo "<p class='col-12 text-center'>"."有關「".htmlspecialchars($key)."」的所有搜尋結果"."</p>";
 				?>
 			</header>
 
 			<div class="tm-container-inner tm-persons">
 				<div class="row">
 					<?php
-						$link = mysqli_connect('140.127.220.233','a1083305','a1083305Checkpoint7','a1083305');
-						$key = $_POST['keyword'];
-						/* Artist */ 
-						$SQL = "SELECT * FROM Artist WHERE aname like '%$key%' OR birthplace like '%$key%' OR age like '%$key%' OR aname like '%$key%'";
+						/* Artist */
+						$SQL = "SELECT * FROM Artist WHERE aname like '%$keySafe%' OR birthplace like '%$keySafe%' OR age like '%$keySafe%' OR aname like '%$keySafe%'";
 						$result = mysqli_query($link,$SQL);
 						while($row = mysqli_fetch_assoc($result)){
 							$picture = $row["aname"].".jpg";
@@ -87,7 +89,7 @@ https://templatemo.com/tm-539-simple-house
 
 						/* Customer*/
 						$SQLc = "SELECT * FROM Customer";
-						$SQLc2 = "SELECT * FROM Customer_Like WHERE aname like '%$key%' OR cname like '%$key%' OR gname like '%$key%'";
+						$SQLc2 = "SELECT * FROM Customer_Like WHERE aname like '%$keySafe%' OR cname like '%$keySafe%' OR gname like '%$keySafe%'";
 						$resultc = mysqli_query($link,$SQLc);
 						$resultc2 = mysqli_query($link,$SQLc2);
 						while($rowc = mysqli_fetch_assoc($resultc)){
@@ -109,7 +111,7 @@ https://templatemo.com/tm-539-simple-house
 						/* Customer */
 
 						/* Artwork */
-						$SQLwork = "SELECT * FROM Artwork WHERE title like '%$key%' OR aname like '%$key%' OR type like '%$key%' OR year like '%$key%' OR price like '%$key%' OR gname like '%$key%'";
+						$SQLwork = "SELECT * FROM Artwork WHERE title like '%$keySafe%' OR aname like '%$keySafe%' OR type like '%$keySafe%' OR year like '%$keySafe%' OR price like '%$keySafe%' OR gname like '%$keySafe%'";
 						$resultwork = mysqli_query($link,$SQLwork);
 						while($rowwork = mysqli_fetch_assoc($resultwork)){
 							$picture = $rowwork["title"].".jpg";
