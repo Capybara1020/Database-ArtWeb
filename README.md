@@ -19,16 +19,19 @@
 
 - 美術作品資訊
 
-<img width="760" height="553" alt="美術館" src="https://github.com/user-attachments/assets/a2ee1e73-f5dc-4a32-883a-e914ae15cf35" />
+<img width="1117" height="897" alt="image" src="https://github.com/user-attachments/assets/9f7c963d-6820-41d1-a1da-d4927b454a2c" />
+
 
 - 作者資訊
 
-<img width="776" height="290" alt="image" src="https://github.com/user-attachments/assets/2dc30519-ac14-4f8c-82e6-09dd0d15e1c3" />
+<img width="1120" height="742" alt="image" src="https://github.com/user-attachments/assets/4b5024f7-8e53-42ba-80db-03ac3e01d19c" />
+
 
 - 搜尋資訊（以 Pablo 為例）
 
 <img width="638" height="358" alt="image" src="https://github.com/user-attachments/assets/ebc81afa-ca91-4875-a0ba-556975700a45" />
-<img width="549" height="471" alt="image" src="https://github.com/user-attachments/assets/a9e9c0d2-a901-46a5-a6db-ee0c490a0a10" />
+<img width="780" height="696" alt="image" src="https://github.com/user-attachments/assets/3a0181b1-d5c4-440d-a530-00ad7b76fcb6" />
+
 
 ---
 
